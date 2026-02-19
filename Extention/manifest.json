@@ -8,7 +8,8 @@
     "storage"],
     "host_permissions": [
        "http://localhost:8080/*",
-       "*://mail.google.com/*"     
+       "*://mail.google.com/*",
+       "*://*.onrender.com/*"     
     ],
     "content_scripts": [
       {
@@ -24,6 +25,11 @@
         "matches": ["*://mail.google.com/*"]
       }
     ],
+    "icons": {
+      "16": "mail.png",
+      "48": "mail.png",
+      "128": "mail.png"
+    },
   "action": {
     "default_title": "Email Helper",
     "default_icon": "mail.png"

@@ -184,7 +184,7 @@ function resolveApiAndPayload() {
         if (!emailContent) return null;
 
         return {
-            url: 'http://localhost:8080/api/email/reply',
+            url: 'https://auto-email-ext.onrender.com/api/email/reply',
             payload: {
                 emailContent,
                 tone: selectedTone
@@ -194,7 +194,7 @@ function resolveApiAndPayload() {
 
     // NEW compose
     return {
-        url: 'http://localhost:8080/api/email/generate',
+        url: 'https://auto-email-ext.onrender.com/api/email/generate',
         payload: {
             purpose: purposeRequest,
             tone: selectedTone
