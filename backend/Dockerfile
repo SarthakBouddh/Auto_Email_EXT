@@ -4,7 +4,6 @@ WORKDIR /app
 
 # Copy pom.xml first (cache dependencies)
 COPY pom.xml .
-RUN mvn dependency:go-offline
 
 # Copy source code
 COPY src ./src
@@ -14,7 +13,7 @@ RUN mvn clean package -DskipTests
 
 
 # ---------- Runtime Stage ----------
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 
 # Copy jar from build stage
